@@ -7,6 +7,16 @@ resources:
   source:
     uri: https://github.com/jinsenglin/conci-working-dir-v3.git
     branch: master
+- name: version
+  type: semver
+  source:
+    initial_version: 0.0.0
+    driver: git
+    uri: https://github.com/jinsenglin/conci-working-dir-v3.git
+    branch: master
+    file: version
+    username: jinsenglin
+    password: {{github-password}}
 
 jobs:
 - name: demo job
@@ -32,3 +42,6 @@ jobs:
         - -exec
         - |
           cat out/secret
+  - put: version
+    params:
+      pre: dev
