@@ -1,5 +1,15 @@
 resource_types: []
 
-resources: []
+resources:
+- name: root
+  type: git
+  source:
+    uri: https://github.com/jinsenglin/conci-working-dir-v3.git
+    branch: master
 
-jobs: []
+jobs:
+- name: demo job
+  plan:
+  - get: root
+  - task: demo task
+    file: root/ci/tasks/demo.yml

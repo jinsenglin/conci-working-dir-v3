@@ -7,13 +7,10 @@ image_resource:
     repository: busybox
     tag: latest
 
-inputs: []
+inputs:
+- name: root
 
 outputs: []
 
 run:
-  path: sh
-  args:
-  - -exec
-  - |
-    env 
+  path: root/ci/scripts/demo.sh
