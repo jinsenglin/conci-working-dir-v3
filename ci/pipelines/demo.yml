@@ -45,3 +45,9 @@ jobs:
   - put: version
     params:
       pre: dev
+- name: demo job next
+  plan:
+  - get: version
+    trigger: true
+    passed:
+    - demo job
