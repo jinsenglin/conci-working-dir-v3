@@ -16,3 +16,19 @@ jobs:
     file: root/ci/tasks/demo.yml
     params:
       secret: {{secret}}
+  - task: demo task next
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: busybox
+          tag: latest
+      inputs:
+      - name: out
+      run:
+        path: sh
+        args:
+        - -exec
+        - |
+          cat out/secret

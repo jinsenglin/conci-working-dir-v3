@@ -1,4 +1,4 @@
 #!/bin/sh
 
 env
-echo $secret
+echo $secret > out/secret

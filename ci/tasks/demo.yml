@@ -10,7 +10,8 @@ image_resource:
 inputs:
 - name: root
 
-outputs: []
+outputs:
+- name: out
 
 params:
   secret:
