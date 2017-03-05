@@ -1,3 +1,4 @@
+---
 resource_types: []
 
 resources:
@@ -13,3 +14,5 @@ jobs:
   - get: root
   - task: demo task
     file: root/ci/tasks/demo.yml
+    params:
+      secret: {{secret}}

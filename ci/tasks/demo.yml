@@ -12,5 +12,8 @@ inputs:
 
 outputs: []
 
+params:
+  secret:
+
 run:
   path: root/ci/scripts/demo.sh
