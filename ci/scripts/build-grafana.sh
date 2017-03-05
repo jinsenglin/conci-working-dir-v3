@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 env
+
+source $HOME/.profile
 
 export GOPATH=`pwd`
 go get github.com/grafana/grafana
