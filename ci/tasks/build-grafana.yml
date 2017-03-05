@@ -7,7 +7,8 @@ image_resource:
     repository: jimlintw/grafana-builder
     tag: 2.0.0
 
-inputs: []
+inputs:
+- name: root
 
 outputs: []
 
