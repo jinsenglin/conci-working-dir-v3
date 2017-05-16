@@ -11,10 +11,11 @@ inputs: []
 
 outputs: []
 
-params: {}
+params:
+    shell: &shell sh
 
 run:
-    path: sh
+    path: *shell
     args:
     - -exec
     - |
