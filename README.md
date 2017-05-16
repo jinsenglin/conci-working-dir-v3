@@ -31,3 +31,9 @@ export PATH=$PATH:$PWD
 cd ci/helpers
 bash build-grafana.sh
 ```
+
+# Demo 3
+
+```
+fly -t <target> e -c ci/tasks/play.yml 
+```
